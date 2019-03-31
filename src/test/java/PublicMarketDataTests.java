@@ -42,6 +42,8 @@ class PublicMarketDataTests {
     @DisplayName("Verify Time Schema")
     void verifyTimeSchema() {
         given()
+                .header("Cache-Control", "no-cache")
+                .accept(ContentType.JSON)
                 .get("/Time")
                 .then()
                 .assertThat()
@@ -49,9 +51,10 @@ class PublicMarketDataTests {
     }
 
     @Test
-    @DisplayName("Get tradable asset pairs")
+    @DisplayName("Get trade-able asset pairs")
     void verifyGetPairs() {
         given()
+                .header("Cache-Control", "no-cache")
                 .get("/AssetPairs")
                 .then()
                 .statusCode(200)
