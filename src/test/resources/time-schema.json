@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Time representation",
+  "type": "object",
+  "properties": {
+    "error": {
+      "type": "array"
+    },
+    "result": {
+      "type": "object",
+      "properties": {
+        "unixtime": {
+          "type": "integer"
+        },
+        "rfc1123": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": [
+    "error",
+    "result"
+  ]
+}
