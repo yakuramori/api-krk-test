@@ -30,3 +30,4 @@ build
 
 # Ignore IDEA files
 .idea
+*.iml
